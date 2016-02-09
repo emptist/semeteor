@@ -1,0 +1,22 @@
+{
+  "name": "semeteor",
+  "version": "1.0.0",
+  "description": "connection to meteor collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emptist/semeteor.git"
+  },
+  "author": "Jigme Ko <jigme1968@gmail.com>",
+  "license": "MIT",
+  "dependencies":{
+    "mongodb":"^2.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/emptist/semeteor/issues"
+  },
+  "homepage": "https://github.com/emptist/semeteor#readme"
+}
