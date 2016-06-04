@@ -17,6 +17,7 @@ dbconnected (err, db) ->
 ###
 {exec} = require 'child_process'
 {MongoClient} = require('mongodb')
+series = require 'run-series'
 
 exec 'ps -ax | grep mongod', (err, res)->
   throw '[error]semeteor>> check if mongod running' if err?
