@@ -1,9 +1,20 @@
 {
   "name": "semeteor",
   "version": "1.0.0",
-  "description": "connection to meteor collection",
+  "description": "connection to mongodb collection",
   "main": "index.js",
   "scripts": {
+    "patch": "npm-run-all gitcommit vpatch pub",
+    "minor": "npm-run-all gitcommit vminor pub",
+    "major": "npm-run-all gitcommit vmajor pub",
+    "gitcommit": "git add --all; git commit -am 'modified'",
+    "vpatch": "npm version patch",
+    "vminor": "npm version minor",
+    "vmajor": "npm version major",
+    "postversion": "git push",
+    "prepub": "echo 已經git push 準備 publish...",
+    "pub": "npm publish ../semeteor",
+    "prepublish": "echo 現在發佈...",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,8 +23,8 @@
   },
   "author": "Jigme Ko <jigme1968@gmail.com>",
   "license": "MIT",
-  "dependencies":{
-    "mongodb":"^2.1.4"
+  "dependencies": {
+    "mongodb": "^2.1.4"
   },
   "bugs": {
     "url": "https://github.com/emptist/semeteor/issues"

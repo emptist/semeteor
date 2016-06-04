@@ -15,10 +15,21 @@ dbconnected (err, db) ->
     console.log "All#{docs}"
   db.close
 ###
-
+{exec} = require 'child_process'
 {MongoClient} = require('mongodb')
-url = 'mongodb://localhost:3001/meteor'
-MongoClient.dbconnected = (callback)->
-  MongoClient.connect url , callback
+
+exec 'ps -ax | grep mongod', (err, res)->
+  throw '[error]semeteor>> check if mongod running' if err?
+  unless /mongod/.test res
+    exec 'mongod --port 3001', (err, data)->
+      throw '[error]semeteor>> check if mongod running' if err?
+      url = 'mongodb://localhost:3001/meteor'
+
+      # https://miguelmota.com/bytes/open-terminal-tab-programatically/
+      # open terminal and run Python before starting app
+
+      MongoClient.dbconnected = (callback)->
+        MongoClient.connect url , callback
+
 
 module.exports = MongoClient.dbconnected
