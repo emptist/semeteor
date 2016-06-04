@@ -1,6 +1,6 @@
 {
   "name": "semeteor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "connection to mongodb collection",
   "main": "index.coffee",
   "scripts": {
