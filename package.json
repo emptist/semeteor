@@ -23,7 +23,9 @@
   },
   "author": "Jigme Ko <jigme1968@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "mongodb": "^2.1.21"
+  },
   "bugs": {
     "url": "https://github.com/emptist/semeteor/issues"
   },
