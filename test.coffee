@@ -1,12 +1,12 @@
-mongoclient = require('./index')
+mongoclient = require('./mongoclient')
 
 mongoclient.connect mongoclient.url, (err, db)->
   db.collections (err,collections)->
-    console.log collections.length
+    console.log  each.collectionName for each in collections
 
   #db.collectionNames (err,names)->
   #  console.log names
-  secs = db.collection "securities"
+  secs = db.collection "funds"
   secs.find().toArray (err,doc)->
-    console.log doc.length
+    console.log doc
     db.close

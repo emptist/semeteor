@@ -1,6 +1,6 @@
 chai = require "chai"
 chai.should()
-dbconnected = require('./collection')
+dbconnected = require('./mongoclient')
 
 describe "dbconnected()", ->
   it "應發現證券品種", (done)->

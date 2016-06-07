@@ -2,7 +2,7 @@
   "name": "semeteor",
   "version": "1.0.6",
   "description": "connection to mongodb collection",
-  "main": "index.coffee",
+  "main": "mongoclient.coffee",
   "scripts": {
     "patch": "npm-run-all gitcommit vpatch pub",
     "minor": "npm-run-all gitcommit vminor pub",
