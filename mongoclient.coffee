@@ -23,7 +23,7 @@ dbconnected (err, db) ->
 {MongoClient} = require('mongodb')
 
 
-MongoClient.url = 'mongodb://localhost:3001/meteor'
+MongoClient.url = "'mongodb://localhost:3001/meteor'"
 ###
 MongoClient.dbconnected = (callback)->
   MongoClient.connect url , callback
